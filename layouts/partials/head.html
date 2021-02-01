@@ -1,0 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="/js/dist/bundle.js"></script>
+    <link rel="stylesheet" href="/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>
+        {{- if .IsHome -}}
+            {{ .Site.Title }}
+        {{- else -}}
+            {{ .Title }} &middot; {{ .Site.Title }}
+        {{- end -}}
+    </title>
+</head>

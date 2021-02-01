@@ -1,0 +1,28 @@
+{
+  "name": "schoolify",
+  "version": "1.0.0",
+  "description": "website for your school",
+  "private": true,
+  "scripts": {
+    "css": "npx tailwindcss build tailwind.css -o static/css/style.css",
+    "dev": "npm run css"
+  },
+  "keywords": [
+    "website",
+    "company profile",
+    "responsive",
+    "static site generator"
+  ],
+  "author": "sholehudin",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^2.8.0",
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  }
+}

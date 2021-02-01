@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply px-4 py-2 inline-block capitalize rounded-full text-white bg-blue hover:bg-blue-dark;
+    }
+
+    @screen lg {
+        .cp-slideshow {
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}

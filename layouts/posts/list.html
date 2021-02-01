@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="border-b lg:w-11/12 lg:container lg:mx-auto border-white-less">
+    <div class="p-4 lg:p-8">
+        <h1 class="mb-4 text-lg font-bold capitalize lg:text-2xl">{{ .Title }}</h1>
+        <ul>
+            {{ range where .Site.RegularPages "Section" "posts" }}
+                <li><a class="text-sm hover:text-blue-dark hover:underline lg:text-xl" href="{{ .Permalink }}">{{ .Title }}</a> - <span class="text-xs font-light lg:text-sm">{{ .PublishDate.Format "January 2, 2006" }}</span></li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}

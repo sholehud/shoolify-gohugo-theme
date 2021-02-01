@@ -1,0 +1,45 @@
+<footer class="flex flex-col p-4 text-xs lg:flex-row lg:justify-between lg:flex-wrap lg:w-11/12 lg:contaner lg:mx-auto">
+    <div class="flex flex-col mb-2">
+        <a href="/" class="text-sm font-bold capitalize lg:text-xl hover:text-blue-dark hover:underline">{{ .Site.Title }}</a>
+        <span class="text-xs lg:text-sm">{{ .Site.Params.slogan }}</span>
+    </div>
+    <div class="mb-2">
+        <h3 class="text-sm font-bold capitalize lg:text-xl">navigations</h3>
+        <ul class="flex flex-col">
+            <li><a class="capitalize lg:text-sm hover:text-blue-dark hover:underline" href="/">home</a></li>
+            <li><a class="capitalize lg:text-sm hover:text-blue-dark hover:underline" href="/">profiles</a></li>
+            <li><a class="capitalize lg:text-sm hover:text-blue-dark hover:underline" href="/">informations</a></li>
+        </ul>
+    </div>
+    <div class="mb-2">
+        <h3 class="text-sm font-bold capitalize lg:text-xl">link</h3>
+        <ul class="flex flex-col">
+            {{ range .Site.Menus.link }}
+                <li><a class="capitalize lg:text-sm hover:text-blue-dark hover:underline" href="{{ .URL }}" target="_BLANK">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    <div class="flex flex-col lg:w-full">
+        <div class="mb-2">
+            <h3 class="text-sm font-bold capitalize lg:text-xl">address</h3>
+            <ul>
+                {{ range .Site.Menus.address }}
+                    <li class="flex flex-row items-center lg:text-sm">{{ .Pre }} {{ .Name }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:items-center">
+            <div class="mb-2 lg:w-6/12">
+                <h3 class="text-sm font-bold capitalize lg:text-xl">social media</h3>
+                <ul class="flex flex-row">
+                    {{ range .Site.Menus.socialmedia }}
+                    <li class="mr-2"><a href="{{ .URL }}" target="_BLANK" title="{{ .Name }}">{{ .Pre }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="lg:text-center lg:w-6/12">
+                <p class="text-xs lg:text-sm">{{ now.Format "2006" }} &copy; .Schoolify by <a href="{{ .Site.Params.authorURL }}" class="capitalize hover:text-blue-dark hover:underline" title="{{ .Site.Params.authorName }}">{{ .Site.Params.authorName }}</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
