@@ -21,7 +21,7 @@
                 <h1 class="text-sm font-bold capitalize lg:text-2xl">{{ .Title }}</h1>
                 <span class="block text-xs font-light capitalize lg:text-sm">{{ .PublishDate.Format "January 2, 2006"}} &middot; <a class="text-xs hover:text-blue-dark hover:underline lg:text-sm" href="{{ $url }}" title="{{ $name }}">{{ $name }}</a></span>
             </div>
-            <div class="text-sm font-light leading-5 lg:text-lg">
+            <div class="overflow-x-auto text-sm font-light leading-5 lg:text-lg">
                 {{ .Content | safeHTML }}
             </div>
         </div>

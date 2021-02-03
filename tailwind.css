@@ -4,9 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    table, thead, tr, th, tbody, tr, td {
+        @apply border border-white-less;
+    }
+
+    th, td {
+        @apply p-4;
+    }
+}
+
 @layer components {
     .btn-primary {
         @apply px-4 py-2 inline-block capitalize rounded-full text-white bg-blue hover:bg-blue-dark;
+    }
+
+    #heading-1 {
+        @apply text-5xl font-bold;
+    }
+
+    #heading-2 {
+        @apply text-4xl font-bold;
+    }
+
+    #heading-3 {
+        @apply text-3xl font-bold;
+    }
+
+    #heading-4 {
+        @apply text-2xl font-bold;
+    }
+
+    #heading-5 {
+        @apply text-xl font-bold;
+    }
+
+    #heading-6 {
+        @apply text-lg font-bold;
     }
 
     @screen lg {
