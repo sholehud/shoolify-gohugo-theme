@@ -1,7 +1,7 @@
 <nav x-data="{ isOpen: false }" class="border-b border-white-less">
     <div class="flex flex-row flex-wrap items-center justify-between lg:w-11/12 lg:container lg:mx-auto">
         <div class="p-4">
-            <a href="/" class="text-lg font-bold capitalize lg:text-2xl">{{ .Site.Title }}</a>
+            <a href="/" class="text-lg font-bold capitalize lg:text-2xl hover:text-blue">{{ .Site.Title }}</a>
         </div>
         <ul x-show="true" @click.away="isOpen = false" :class="{'flex': isOpen, 'hidden': !isOpen}" class="flex-col order-2 w-full border-t lg:flex lg:flex-row lg:w-auto border-white-less lg:border-none">
             {{ range .Site.Menus.menu }}
