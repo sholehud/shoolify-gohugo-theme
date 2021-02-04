@@ -548,14 +548,29 @@ video {
   height: auto;
 }
 
-table, thead, tr, th, tbody, tr, td {
+.markdown .tb th, .markdown .tb td {
   --tw-border-opacity: 1;
   border-color: rgba(239, 239, 239, var(--tw-border-opacity));
   border-width: 1px;
+  padding: 1rem;
 }
 
-th, td {
-  padding: 1rem;
+.markdown a:hover{
+  --tw-text-opacity: 1;
+  color: rgba(19, 118, 250, var(--tw-text-opacity));
+  text-decoration: underline;
+}
+
+.markdown ul, .markdown ol {
+  list-style-position: inside;
+}
+
+.markdown ul {
+  list-style-type: disc;
+}
+
+.markdown ol {
+  list-style-type: decimal
 }
 
 .container{

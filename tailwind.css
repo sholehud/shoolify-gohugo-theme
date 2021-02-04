@@ -5,12 +5,24 @@
 @tailwind utilities;
 
 @layer base {
-    table, thead, tr, th, tbody, tr, td {
-        @apply border border-white-less;
+    .markdown .tb th, .markdown .tb td {
+        @apply p-4 border border-white-less;
     }
 
-    th, td {
-        @apply p-4;
+    .markdown a {
+        @apply hover:underline hover:text-blue;
+    }
+
+    .markdown ul, .markdown ol {
+        @apply list-inside;
+    }
+
+    .markdown ul {
+        @apply list-disc;
+    }
+
+    .markdown ol {
+        @apply list-decimal
     }
 }
 

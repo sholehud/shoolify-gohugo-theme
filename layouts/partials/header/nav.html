@@ -6,7 +6,7 @@
         <ul x-show="true" @click.away="isOpen = false" :class="{'flex': isOpen, 'hidden': !isOpen}" class="flex-col order-2 w-full border-t lg:flex lg:flex-row lg:w-auto border-white-less lg:border-none">
             {{ range .Site.Menus.menu }}
                 {{ if .HasChildren }}
-                    <li x-data="{submenu: false}" class="my-1 lg:mr-4 lg:relative"><a @click="submenu = !submenu" :class="{'rounded-b-none rounded-t-3xl bg-blue text-white': submenu}" class="block px-4 py-2 text-sm capitalize rounded-full hover:text-white hover:bg-blue lg:text-lg" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                    <li x-data="{submenu: false}" class="my-1 lg:mr-4 lg:relative"><a @click="submenu = !submenu" :class="{'lg:rounded-b-none lg:rounded-t-3xl lg:bg-blue lg:text-white': submenu}" class="block px-4 py-2 text-sm capitalize lg:rounded-full hover:text-white hover:bg-blue lg:text-lg" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
                         {{ range .Children }}
                             <ul x-show="true" @click.away="submenu = false" :class="{'flex': submenu, 'hidden': !submenu}" class="flex-col lg:absolute lg:bg-white lg:right-0 lg:min-w-sm lg:z-10">
                                 <li class="my-1 lg:my-0"><a class="block py-2 pl-8 pr-4 text-sm capitalize hover:bg-blue hover:text-white lg:pl-4 lg:text-lg" href="{{ .Title }}" title="{{ .Title }}">{{ .Name }}</a></li>
@@ -14,7 +14,7 @@
                         {{ end }}
                     </li>
                 {{ else }}
-                    <li class="my-1 lg:mr-4"><a class="block px-4 py-2 text-sm capitalize rounded-full lg:text-lg hover:text-white hover:bg-blue" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+                    <li class="my-1 lg:mr-4"><a class="block px-4 py-2 text-sm capitalize lg:rounded-full lg:text-lg hover:text-white hover:bg-blue" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
                 {{ end }}
             {{ end }}
         </ul>
