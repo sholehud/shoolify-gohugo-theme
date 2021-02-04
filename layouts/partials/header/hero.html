@@ -5,9 +5,9 @@
             <h1 class="text-lg font-bold text-center uppercase lg:text-left lg:text-5xl">{{ .Site.Params.slogan }}</h1>
             <a class="my-4 text-lg btn-primary" href="/">join now</a>
             <ul class="flex flex-row lg:mt-8">
-                {{ range .Site.Menus.socialmedia }}
-                <li class="mx-2 lg:ml-0 lg:mr-2"><a href="{{ .URL }}" target="_BLANK" title="{{ .Name }}">{{ .Pre }}</a></li>
-                {{ end }}
+            {{ range .Site.Menus.socialmedia }}
+            <li class="mx-2 lg:ml-0 lg:mr-2"><a href="{{ .URL }}" target="_BLANK" title="{{ .Name }}">{{ .Pre }}</a></li>
+            {{ end }}
             </ul>
         </div>
     </div>
@@ -24,19 +24,19 @@
     </div>
     <div class="order-3 w-full border-b lg:order-none border-white-less">
         <div class="flex flex-col order-3 p-4 lg:w-11/12 lg:container lg:mx-auto lg:py-8 lg:justify-between lg:flex-row">
-            {{ with .Site.Menus.statistic }}
-                {{ range . }}
-                    <div class="flex flex-row items-center p-4 mb-2 rounded-xl bg-blue-less">
-                        <div class="mr-4">
-                            {{ .Pre }}
-                        </div>
-                        <div>
-                            <h3 class="text-sm font-bold capitalize lg:text-xl">{{ .Title }}</h3>
-                            <span class="text-xs font-light capitalize lg:text-lg">{{ .Name }}</span>
-                        </div>
-                    </div>
-                {{ end }}
-            {{ end }}
+        {{ with .Site.Menus.statistic }}
+        {{ range . }}
+            <div class="flex flex-row items-center p-4 mb-2 rounded-xl bg-blue-less">
+                <div class="mr-4">
+                    {{ .Pre }}
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold capitalize lg:text-xl">{{ .Title }}</h3>
+                    <span class="text-xs font-light capitalize lg:text-lg">{{ .Name }}</span>
+                </div>
+            </div>
+        {{ end }}
+        {{ end }}
         </div>
     </div>
 </div>

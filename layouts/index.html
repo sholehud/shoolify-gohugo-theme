@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ if .IsHome }}
-        {{- partial "blogs/post.html" . -}}
-    {{ end }}
+{{ if .IsHome }}
+{{- partial "blogs/post.html" . -}}
+{{ end }}
 {{ end }}

@@ -14,27 +14,27 @@
     <div class="mb-2">
         <h3 class="text-sm font-bold capitalize lg:text-xl">link</h3>
         <ul class="flex flex-col">
-            {{ range .Site.Menus.link }}
-                <li><a class="capitalize lg:text-sm hover:text-blue-dark hover:underline" href="{{ .URL }}" target="_BLANK">{{ .Name }}</a></li>
-            {{ end }}
+        {{ range .Site.Menus.link }}
+            <li><a class="capitalize lg:text-sm hover:text-blue-dark hover:underline" href="{{ .URL }}" target="_BLANK">{{ .Name }}</a></li>
+        {{ end }}
         </ul>
     </div>
     <div class="flex flex-col lg:w-full">
         <div class="mb-2">
             <h3 class="text-sm font-bold capitalize lg:text-xl">address</h3>
             <ul>
-                {{ range .Site.Menus.address }}
-                    <li class="flex flex-row items-center lg:text-sm">{{ .Pre }} {{ .Name }}</li>
-                {{ end }}
+            {{ range .Site.Menus.address }}
+                <li class="flex flex-row items-center lg:text-sm">{{ .Pre }} {{ .Name }}</li>
+            {{ end }}
             </ul>
         </div>
         <div class="flex flex-col lg:flex-row lg:items-center">
             <div class="mb-2 lg:w-6/12">
                 <h3 class="text-sm font-bold capitalize lg:text-xl">social media</h3>
                 <ul class="flex flex-row">
-                    {{ range .Site.Menus.socialmedia }}
+                {{ range .Site.Menus.socialmedia }}
                     <li class="mr-2"><a href="{{ .URL }}" target="_BLANK" title="{{ .Name }}">{{ .Pre }}</a></li>
-                    {{ end }}
+                {{ end }}
                 </ul>
             </div>
             <div class="lg:text-center lg:w-6/12">
